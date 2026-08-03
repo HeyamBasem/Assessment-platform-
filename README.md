@@ -1,2 +1,0 @@
-# AssessmentPlatform
-Internship Assessment platform
