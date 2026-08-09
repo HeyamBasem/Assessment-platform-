@@ -6,7 +6,7 @@ import com.example.demo.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
+import jakarta.validation.Valid;
 import java.util.List;
 import com.example.demo.dto.LoginResponse;
 @CrossOrigin(origins = "http://localhost:5173")
@@ -18,9 +18,11 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/register")
-    public User registerUser(@RequestBody User user) {
-        return userService.saveUser(user);
-    }
+public User registerUser(
+        @Valid @RequestBody User user) {
+
+    return userService.saveUser(user);
+}
 
     @PostMapping("/login")
 public LoginResponse login(
