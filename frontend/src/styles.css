@@ -214,3 +214,20 @@ button:hover {
     background: transparent;
     color: red;
 }
+.forgot-password-container {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.forgot-password-btn {
+    background: none;
+    border: none;
+    color: #1976d2;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0;
+}
+
+.forgot-password-btn:hover {
+    text-decoration: underline;
+}

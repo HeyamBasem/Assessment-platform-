@@ -9,9 +9,14 @@ import CreateAssessment from "./pages/CreateAssessment";
 import ViewAssessments from "./pages/ViewAssessments";
 import Schools from "./pages/Schools";
 import Home from "./pages/Home";
+import ResetPassword from "./pages/ResetPassword";
 function App() {
     return (
         <Routes>
+            <Route
+    path="/reset-password"
+    element={<ResetPassword />}
+/>
             <Route
                 path="/"
                 element={<Home />}
@@ -34,6 +39,7 @@ function App() {
                 element={<Schools />}
             />
         </Routes>
+        
     );
 }
 
