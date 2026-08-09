@@ -87,4 +87,24 @@ public class UserService {
     public void deleteUser(Long id) {
         userRepository.deleteById(id);
     }
+    public String resetPassword(
+        String email,
+        String newPassword) {
+
+    Optional<User> user =
+            userRepository.findByEmail(email);
+
+    if (user.isPresent()) {
+
+        user.get().setPassword(
+        passwordEncoder.encode(newPassword)
+);
+
+        userRepository.save(user.get());
+
+        return "Password Updated Successfully";
+    }
+
+    return "User Not Found";
+}
 }

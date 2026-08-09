@@ -3,7 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.dto.LoginRequest;
 import com.example.demo.entity.User;
 import com.example.demo.service.UserService;
-
+import com.example.demo.dto.ResetPasswordRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import jakarta.validation.Valid;
@@ -72,4 +72,13 @@ public LoginResponse login(
 
         return "User deleted successfully";
     }
+    @PutMapping("/reset-password")
+public String resetPassword(
+        @RequestBody ResetPasswordRequest request) {
+
+    return userService.resetPassword(
+            request.getEmail(),
+            request.getNewPassword()
+    );
+}
 }
