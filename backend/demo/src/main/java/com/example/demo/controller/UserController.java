@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+import com.example.demo.dto.LoginResponse;
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/api/users")
@@ -23,13 +23,27 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public User login(@RequestBody LoginRequest request) {
+public LoginResponse login(
+        @RequestBody LoginRequest request) {
 
-        return userService.login(
-                request.getEmail(),
-                request.getPassword()
+    User user = userService.login(
+            request.getEmail(),
+            request.getPassword()
+    );
+
+    if (user != null) {
+
+        return new LoginResponse(
+                "Login Successful",
+                user
         );
     }
+
+    return new LoginResponse(
+            "Invalid Email or Password",
+            null
+    );
+}
 
     @GetMapping
     public List<User> getAllUsers() {
