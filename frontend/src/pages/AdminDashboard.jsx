@@ -30,31 +30,37 @@ function AdminDashboard() {
 
             <h1>Admin Dashboard</h1>
 
-            <button
-                className="create-btn"
-                onClick={() => navigate("/create-assessment")}
-            >
-                + Create Assessment
-            </button>
+            <div className="navbar">
 
-            <button
-                className="create-btn"
-                onClick={() => navigate("/view-assessments")}
-            >
-                View Assessments
-            </button>
-            <button
-                className="create-btn"
-                onClick={() => navigate("/schools")}
-            >
-                View Schools
-            </button>
-            <button
-                className="logout-btn"
-                onClick={() => navigate("/login")}
-            >
-                Logout
-            </button>
+    <button
+        className="nav-btn"
+        onClick={() => navigate("/create-assessment")}
+    >
+        Create Assessment
+    </button>
+
+    <button
+        className="nav-btn"
+        onClick={() => navigate("/view-assessments")}
+    >
+        View Assessments
+    </button>
+
+    <button
+        className="nav-btn"
+        onClick={() => navigate("/schools")}
+    >
+        View Schools
+    </button>
+
+    <button
+        className="logout-nav-btn"
+        onClick={() => navigate("/login")}
+    >
+        Logout
+    </button>
+
+</div>
             <div className="dashboard-container">
 
                 <div className="dashboard-card">

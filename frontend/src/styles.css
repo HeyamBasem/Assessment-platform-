@@ -143,3 +143,66 @@ button:hover {
     border: none;
     border-radius: 6px;
 }
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    background-color: #1e3a8a;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 40px;
+
+    padding: 18px 0;
+
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+
+    z-index: 1000;
+}
+
+.nav-btn {
+    width: auto;
+
+    background: transparent;
+    color: white;
+
+    border: none;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    padding: 10px 15px;
+}
+
+.nav-btn:hover {
+    background: transparent;
+    color: #dbeafe;
+}
+
+.logout-nav-btn {
+    width: auto;
+
+    background: transparent;
+    color: white;
+
+    border: none;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    padding: 10px 15px;
+}
+
+.logout-nav-btn:hover {
+    background: transparent;
+    color: red;
+}
