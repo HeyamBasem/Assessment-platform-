@@ -21,7 +21,7 @@ function Login() {
             );
 
             console.log(response.data);
-            const user = response.data;
+            const user = response.data.user;
 
             if (user.role === "ADMIN") {
                 navigate("/admin-dashboard");
